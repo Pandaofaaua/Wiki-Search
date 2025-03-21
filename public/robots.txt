@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wikisearchbyloseyi.netlify.app
+
+# Sitemaps
+Sitemap: https://wikisearchbyloseyi.netlify.app/sitemap.xml

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   results: Result;
@@ -24,12 +25,13 @@ const Items = ({ results }: Props) => {
     <article className="m-4">
       <div className="flex flex-row gap-4">
         <div className="flex flex-col justify-center">
-          <img
+          <Image
             src={results.thumbnail.source}
             alt={results.title}
             width={results.thumbnail.width}
             height={results.thumbnail.height}
             loading="lazy"
+            className="rounded"
           />
         </div>
         {ItemTextCol}

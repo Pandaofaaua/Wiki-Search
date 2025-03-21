@@ -1,5 +1,4 @@
 import getWikiResult from "../../../lib/getWikiResult";
-import { Metadata } from "next";
 import Items from "./components/Items";
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params }: Props) {
   const { searchTerm } = await params;
   const decodedTerm = decodeURIComponent(searchTerm);
   const wikiData: Promise<SearchResult> = getWikiResult(searchTerm);
